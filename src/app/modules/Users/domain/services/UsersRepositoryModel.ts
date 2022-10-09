@@ -1,9 +1,10 @@
-import type { Users } from "../interfaces";
+import type { Users, User } from "../interfaces";
+import type { IPayload, Response } from "@/app/network/domain/interfaces";
 
 export interface UsersRepositoryModel {
-  getAll(): Promise<Users[]>;
-  getById(id: number): Promise<Users>;
-  create(user: Users): Promise<Users>;
-  update(user: Users): Promise<Users>;
-  delete(id: number): Promise<void>;
+  getUsers(): Promise<Response<Users>>;
+  getById(id: number): Promise<Response<User>>;
+  create(payload: IPayload<User>): Promise<Response<User>>;
+  update(payload: IPayload<User>): Promise<Response<User>>;
+  delete(id: number): Promise<Response<User>>;
 }
