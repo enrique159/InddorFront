@@ -1,0 +1,106 @@
+/* ============== SF Pro ============== */
+@font-face {
+  font-family: "SF Pro";
+  font-weight: 800;
+  font-style: normal;
+  font-display: auto;
+  src: local("SF Pro Heavy"), url("@/assets/fonts/SFPro/SF-Pro-Text-Heavy.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SF Pro";
+  font-weight: 700;
+  font-style: normal;
+  font-display: auto;
+  src: local("SF Pro Bold"), url("@/assets/fonts/SFPro/SF-Pro-Text-Bold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SF Pro";
+  font-weight: 600;
+  font-style: normal;
+  font-display: auto;
+  src: local("SF Pro Semibold"), url("@/assets/fonts/SFPro/SF-Pro-Text-Semibold.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SF Pro";
+  font-weight: 500;
+  font-style: normal;
+  font-display: auto;
+  src: local("SF Pro Medium"), url("@/assets/fonts/SFPro/SF-Pro-Text-Medium.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SF Pro";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  src: local("SF Pro Regular"), url("@/assets/fonts/SFPro/SF-Pro-Text-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: "SF Pro";
+  font-weight: 300;
+  font-style: normal;
+  font-display: auto;
+  src: local("SF Pro Light"), url("@/assets/fonts/SFPro/SF-Pro-Text-Light.otf") format("opentype");
+}
+
+/* ============== Larken ============== */
+@font-face {
+  font-family: "Larken";
+  font-weight: 800;
+  font-style: normal;
+  font-display: auto;
+  src: local("Larken Black"), url("@/assets/fonts/Larken/Larken Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Larken";
+  font-weight: 700;
+  font-style: normal;
+  font-display: auto;
+  src: local("Larken Extra Bold"), url("@/assets/fonts/Larken/Larken Extra Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Larken";
+  font-weight: 600;
+  font-style: normal;
+  font-display: auto;
+  src: local("Larken Bold"), url("@/assets/fonts/Larken/Larken Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Larken";
+  font-weight: 500;
+  font-style: normal;
+  font-display: auto;
+  src: local("Larken Medium"), url("@/assets/fonts/Larken/Larken Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Larken";
+  font-weight: 400;
+  font-style: normal;
+  font-display: auto;
+  src: local("Larken Regular"), url("@/assets/fonts/Larken/Larken Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Larken";
+  font-weight: 300;
+  font-style: normal;
+  font-display: auto;
+  src: local("Larken Light"), url("@/assets/fonts/Larken/Larken Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Larken";
+  font-weight: 200;
+  font-style: normal;
+  font-display: auto;
+  src: local("Larken Thin"), url("@/assets/fonts/Larken/Larken Thin.ttf") format("truetype");
+}
+
