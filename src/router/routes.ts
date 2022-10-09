@@ -1,6 +1,10 @@
 import MainView from "@/views/MainView.vue";
-import LoginModule from "@/modules/login/LoginModule.vue";
-import DashboardModule from "@/modules/dashboard/DashboardModule.vue";
+
+// Login
+import { LoginRoutes } from "@/modules/login/routes";
+
+// Dashboard Routes
+import { DashboardRoutes } from "@/modules/dashboard/routes";
 
 const routes = [
   {
@@ -9,18 +13,10 @@ const routes = [
     redirect: "/dashboard",
     component: MainView,
     children: [
-      {
-        path: "/dashboard",
-        name: "Dashboard",
-        component: DashboardModule,
-      }
+      ...DashboardRoutes,
     ]
   },
-  {
-    path: "/login",
-    name: "Login",
-    component: LoginModule,
-  }
+  ...LoginRoutes,
 ];
 
 export default routes
