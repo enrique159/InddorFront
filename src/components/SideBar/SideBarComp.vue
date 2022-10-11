@@ -3,7 +3,7 @@
     <el-menu
       class="drawer-menu"
       :class="{ expanded: !isCollapse }"
-      default-active="1"
+      :default-active="currentRoute"
       :collapse="isCollapse"
       :collapse-transition="false"
     >
@@ -14,11 +14,11 @@
           >Administra</span
         >
       </div>
-      <el-menu-item index="1">
+      <el-menu-item index="1" @click="openRoute('Dashboard')">
         <el-icon><HomeIcon /></el-icon>
         <template #title>Inicio</template>
       </el-menu-item>
-      <el-menu-item index="2">
+      <el-menu-item index="2" @click="openRoute('Boards')">
         <el-icon><LayoutIcon /></el-icon>
         <template #title>Tableros</template>
       </el-menu-item>
@@ -68,7 +68,7 @@
       </el-menu-item>
     </el-menu>
 
-    <button class="btn-toggle-menu" @click="isCollapse = !isCollapse">
+    <button class="btn-toggle-menu" @click="collapseToggle()">
       <ChevronRightIcon v-if="isCollapse" color="white" size="18" />
       <ChevronLeftIcon v-else color="white" size="18" />
     </button>
@@ -77,8 +77,56 @@
 
 <script setup lang="ts">
 import { ref } from "vue";
+import { useRouter } from "vue-router";
 
 const isCollapse = ref(false);
+
+const collapseToggle = () => {
+  isCollapse.value = !isCollapse.value;
+};
+
+// Router
+const currentRoute = ref<string>("1");
+const router = useRouter();
+const currentRouteName = router.currentRoute.value.name;
+
+const openRoute = (route: string) => {
+  router.push({ name: route });
+  return 
+};
+
+switch (currentRouteName) {
+  case "Dashboard":
+    currentRoute.value = "1";
+    break;
+  case "Boards":
+    currentRoute.value = "2";
+    break;
+  case "Contracts":
+    currentRoute.value = "3";
+    break;
+  case "Suppliers":
+    currentRoute.value = "4";
+    break;
+  case "Calendar":
+    currentRoute.value = "5";
+    break;
+  case "Statistics":
+    currentRoute.value = "6";
+    break;
+  case "Inbox":
+    currentRoute.value = "7";
+    break;
+  case "Finances":
+    currentRoute.value = "8";
+    break;
+  case "Organization":
+    currentRoute.value = "9";
+    break;
+  default:
+    currentRoute.value = "1";
+    break;
+}
 </script>
 
 <style lang="scss">

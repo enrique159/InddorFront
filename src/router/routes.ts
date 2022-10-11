@@ -1,9 +1,8 @@
 import MainView from "@/views/MainView.vue";
 
-// Login
+// Modules
 import { LoginRoutes } from "@/modules/login/routes";
-
-// Dashboard Routes
+import { BoardsRoutes } from "@/modules/boards/routes";
 import { DashboardRoutes } from "@/modules/dashboard/routes";
 
 const routes = [
@@ -14,6 +13,7 @@ const routes = [
     component: MainView,
     children: [
       ...DashboardRoutes,
+      ...BoardsRoutes,
     ]
   },
   ...LoginRoutes,
