@@ -78,6 +78,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRouter } from "vue-router";
+import { getRouteValueSideBar } from "@/utils/getRouteValueSideBar";
 
 const isCollapse = ref(false);
 
@@ -95,38 +96,7 @@ const openRoute = (route: string) => {
   return 
 };
 
-switch (currentRouteName) {
-  case "Dashboard":
-    currentRoute.value = "1";
-    break;
-  case "Boards":
-    currentRoute.value = "2";
-    break;
-  case "Contracts":
-    currentRoute.value = "3";
-    break;
-  case "Suppliers":
-    currentRoute.value = "4";
-    break;
-  case "Calendar":
-    currentRoute.value = "5";
-    break;
-  case "Statistics":
-    currentRoute.value = "6";
-    break;
-  case "Inbox":
-    currentRoute.value = "7";
-    break;
-  case "Finances":
-    currentRoute.value = "8";
-    break;
-  case "Organization":
-    currentRoute.value = "9";
-    break;
-  default:
-    currentRoute.value = "1";
-    break;
-}
+currentRoute.value = getRouteValueSideBar(currentRouteName);
 </script>
 
 <style lang="scss">

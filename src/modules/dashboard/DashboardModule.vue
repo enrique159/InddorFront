@@ -8,6 +8,9 @@
 <script setup lang="ts">
 import SideSectionComp from "./components/SideSectionComp.vue";
 import DashboardComp from "./components/DashboardComp.vue";
+import { useTitle } from '@vueuse/core'
+
+useTitle('Inicio', { titleTemplate: '%s | Inddor' })
 </script>
 
 <style lang="scss" scoped>
