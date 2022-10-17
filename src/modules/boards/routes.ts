@@ -5,10 +5,11 @@ export const BoardsRoutes = [
   {
     path: "/boards",
     name: "Boards",
+    redirect: "/boards/all",
     component: BoardsModule,
     children: [
       {
-        path: "",
+        path: "/boards/all",
         name: "BoardsView",
         component: BoardsView,
       },

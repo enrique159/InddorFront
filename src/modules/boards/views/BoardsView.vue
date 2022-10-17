@@ -1,11 +1,13 @@
 <template>
   <div class="boards-view">
-    <h1>Tableros</h1>
+    <BoardsHeaderAll class="mb-4" />
+    <BoardsListOptions />
   </div>
 </template>
 
 <script setup lang="ts">
-
+import BoardsHeaderAll from '@/modules/boards/components/BoardsHeaderAll.vue'
+import BoardsListOptions from '@/modules/boards/components/BoardsListOptions.vue'
 </script>
 
 <style lang="scss" scoped>

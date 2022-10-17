@@ -21,10 +21,10 @@
         </el-form-item>
 
         <!-- SUBMIT BUTTON -->
-        <button class="form-submit bg-green br-small ts-normal tw-bold py-2 br-medium" @click="submitForm(loginFormRef)">
+        <el-button class="form-submit bg-green br-small ts-normal tw-bold py-2 br-medium" @click="submitForm(loginFormRef)">
           <span style="color: white;" v-if="!loading">Acceder</span>
           <LoadingAnimateComp v-else />
-        </button>
+        </el-button>
       </el-form>
 
       <!-- REGISTER BUTTON -->

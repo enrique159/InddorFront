@@ -68,17 +68,17 @@
       </el-menu-item>
     </el-menu>
 
-    <button class="btn-toggle-menu" @click="collapseToggle()">
+    <el-button class="btn-toggle-menu" @click="collapseToggle()" circle>
       <ChevronRightIcon v-if="isCollapse" color="white" size="18" />
       <ChevronLeftIcon v-else color="white" size="18" />
-    </button>
+    </el-button>
   </div>
 </template>
 
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import { getRouteValueSideBar } from "@/utils/getRouteValueSideBar";
+import { getRouteValueSideBar } from "@/components/SideBar/getRouteValueSideBar";
 
 const isCollapse = ref(false);
 
@@ -147,6 +147,13 @@ currentRoute.value = getRouteValueSideBar(currentRouteName);
 
   &:hover {
     background-color: var(--color-green);
+  }
+
+  &:focus, &:active {
+    color: inherit;
+    border-color: none;
+    background-color: var(--color-green);
+    outline: none;
   }
 }
 

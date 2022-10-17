@@ -3,7 +3,7 @@
   /*COLORS*/
   /* Hex color mode */
   // INDDOR COLORS
-  --color-purple: hsl(272, 66%, 79%);
+  --color-purple: hsl(272, 69%, 75%);
   --color-blue: hsl(227, 82%, 61%);
   --color-red: hsl(0, 79%, 55%);
   --color-yellow: hsl(40, 84%, 78%);
@@ -255,13 +255,6 @@ input {
 
 // CURSOR
 .cursor-pointer { cursor: pointer; }
-
-// COLOR DASHES
-.color-dash {
-  width: 24px;
-  height: 6px;
-  border-radius: 3px;
-}
 
 // WIDTH
 .w-100 { width: 100%; }
