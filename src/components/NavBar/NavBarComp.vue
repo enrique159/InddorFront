@@ -37,7 +37,7 @@
         content="Notificaciones"
         placement="bottom-end"
       >
-        <el-button :icon="BellIcon" circle class="notification-dot" />
+        <el-button :icon="BellIcon" circle class="notification-dot" @click="showNotificationsDrawer"/>
       </el-tooltip>
       
       <!-- USER PROFILE -->
@@ -47,22 +47,31 @@
       />
     </div>
   </div>
+
+  <!-- NOTIFICATIONS DRAWER -->
+  <NotificationsModule v-model="showNotifications"/>
 </template>
 
 <script setup lang="ts">
 import { SearchIcon, AdjustmentsHorizontalIcon, BellIcon } from "vue-tabler-icons";
+import NotificationsModule from "@/modules/notifications/NotificationsModule.vue";
 // composables
 import { ref } from "vue";
 import { useMessage } from "@/composables/useMessage";
 import { useNotifications } from "@/composables/useNotifications";
 
 const search = ref("");
+const showNotifications = ref(false);
 const { message } = useMessage();
 const { notify } = useNotifications();
 
 function showMessage() {
   message('Hello world!');
   notify('Hello world!', 'Message');
+}
+
+function showNotificationsDrawer() {
+  showNotifications.value = !showNotifications.value;
 }
 </script>
 

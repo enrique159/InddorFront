@@ -1,4 +1,5 @@
 import MainView from "@/views/MainView.vue";
+import NotFoundView from "@/views/NotFoundView.vue";
 
 // Modules
 import { LoginRoutes } from "@/modules/login/routes";
@@ -20,8 +21,8 @@ const routes = [
   // 404
   {
     path: '/:pathMatch(.*)*',
-    name: "404",
-    component: () => import("@/views/404.vue")
+    name: "NotFound",
+    component: NotFoundView
   }
 ];
 
