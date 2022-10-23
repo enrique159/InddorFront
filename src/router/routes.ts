@@ -5,6 +5,7 @@ import NotFoundView from "@/views/NotFoundView.vue";
 import { LoginRoutes } from "@/modules/login/routes";
 import { BoardsRoutes } from "@/modules/boards/routes";
 import { DashboardRoutes } from "@/modules/dashboard/routes";
+import { CalendarRoutes } from "@/modules/calendar/routes";
 
 const routes = [
   {
@@ -15,6 +16,7 @@ const routes = [
     children: [
       ...DashboardRoutes,
       ...BoardsRoutes,
+      ...CalendarRoutes,
     ]
   },
   ...LoginRoutes,

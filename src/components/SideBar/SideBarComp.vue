@@ -38,7 +38,7 @@
           >Rendimiento</span
         >
       </div>
-      <el-menu-item index="5">
+      <el-menu-item index="5" @click="openRoute('Calendar')">
         <el-icon><CalendarIcon /></el-icon>
         <template #title>Calendario</template>
       </el-menu-item>
@@ -76,7 +76,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
+import { ref, watch } from "vue";
 import { useRouter } from "vue-router";
 import { getRouteValueSideBar } from "@/components/SideBar/getRouteValueSideBar";
 
@@ -97,6 +97,14 @@ const openRoute = (route: string) => {
 };
 
 currentRoute.value = getRouteValueSideBar(currentRouteName);
+
+// Escucha los cambios de ruta para actualizar el valor del menú
+watch(
+  () => router.currentRoute.value.name,
+  (newRoute) => {
+    currentRoute.value = getRouteValueSideBar(newRoute);
+  }
+);
 </script>
 
 <style lang="scss">

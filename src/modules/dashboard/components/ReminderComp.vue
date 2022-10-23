@@ -25,6 +25,7 @@
 <script setup lang="ts">
 import SeparatorBar from '@/components/SeparatorBar/SeparatorBar.vue'
 import Checker from '@/components/Checker/Checker.vue'
+import { useMessage } from '@/composables/useMessage'
 import { ref, computed } from 'vue'
 import moment from 'moment'
 // Types
@@ -93,8 +94,12 @@ const separatorColor = computed(() => {
 
 
 // Checker done
+const { message } = useMessage()
 const handleCheck = () => {
   reminder.done = !reminder.done
+  if (reminder.done) {
+    message('Recordatorio completado', 'success')
+  }
 }
 
 </script>

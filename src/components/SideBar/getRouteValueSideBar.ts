@@ -15,7 +15,10 @@ export const getRouteValueSideBar = (route: RouteRecordName | null | undefined):
       return "3";
     case "Suppliers":
       return "4";
+    // CALENDAR
     case "Calendar":
+      return "5";
+    case "CalendarHome":
       return "5";
     case "Statistics":
       return "6";
