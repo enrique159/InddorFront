@@ -74,7 +74,7 @@
   // --bs-primary: 0 0.5rem 1rem 0.1rem #0067f84d;
   // --bs-secondary: 0 0.5rem 1rem 0.1rem #0311499d;
   // --bs-danger: 0 0.5rem 1rem 0.1rem #ff003c55;
-  // --bs-light: 0 0.5rem 1rem 0.1rem #9595951a;
+  --bs-light: 0 0rem 1rem 0.1rem #d6d6d61a;
   // --bs-dark: 0 0.5rem 1rem 0.1rem #0000001d;
 }
 
@@ -235,6 +235,11 @@ input {
 .ta-left { text-align: left; }
 .ta-center { text-align: center; }
 .ta-right { text-align: right; }
+
+// TEXT TRANSFORMATIONS
+.tt-uppercase { text-transform: uppercase; }
+.tt-lowercase { text-transform: lowercase; }
+.tt-capitalize { text-transform: capitalize; }
 
 // FONT FAMILY
 .ff-general { font-family: var(--general-font); }

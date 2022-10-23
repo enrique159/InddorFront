@@ -10,6 +10,12 @@ import router from './router'
 import '@/styles/fonts.css'
 import '@/styles/main.scss'
 import '@/styles/spacing.scss'
+import '@/styles/common.scss'
+
+// Change the default locale momentjs
+import moment from 'moment'
+import 'moment/dist/locale/es';
+moment.locale('es')
 
 const app = createApp(App)
 

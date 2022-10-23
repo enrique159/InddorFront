@@ -1,13 +1,13 @@
 <template>
   <div class="dashboard-view">
-    <DashboardComp />
+    <DashboardView />
     <SideSectionComp />
   </div>
 </template>
 
 <script setup lang="ts">
-import SideSectionComp from "./components/SideSectionComp.vue";
-import DashboardComp from "./components/DashboardComp.vue";
+import SideSectionComp from "./views/SideSectionComp.vue";
+import DashboardView from "./views/DashboardView.vue";
 import { useTitle } from '@vueuse/core'
 
 useTitle('Inicio', { titleTemplate: '%s | Inddor' })
